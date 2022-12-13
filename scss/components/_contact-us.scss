@@ -1,0 +1,115 @@
+@import '../variables';
+@import '../elements/button';
+
+
+.contact-us {
+  background-color: $c-light-pink;
+
+  &__wrapper {
+    display: flex;
+
+    @include media("<=desktop") {
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+  }
+
+  &__map {
+    
+    @include media("<=desktop") {
+      justify-content: center;
+      display: flex;
+    }
+
+  }
+
+
+
+
+  &__block {
+    padding-bottom: 108px;
+    padding-left: 120px;
+    padding-top: 112px;
+    
+    @include media("<=desktop") {
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      display: flex;
+      padding: 30px;
+    }
+  }
+
+  &__title {
+    font-family: $ff-manrope;
+    line-height: 64px;
+    font-weight: 800;
+    color: $c-black;
+    font-size: 48px;
+  }
+
+  &__item {
+    flex-direction: column;
+    margin-top: 24px;
+    display: flex;
+
+  }
+  &__item:first-child {
+    margin-top: 40px;
+  }
+
+  &__name {
+    font-family: $ff-helvetica;
+    color: $c-white-grey;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+
+  &__input {
+    border: 1px solid  $c-light-pink;
+    padding-left: 16px;
+    border-radius: 7px;
+    margin-top: 8px;
+    opacity: 0.7;
+    height: 56px;
+    width: 400px;
+  }
+
+  
+  &__input--message {
+    height: 120px;
+    width: 400px;
+  }
+
+  &__input:hover {
+    border: 1px solid $c-light-yellow
+  }
+
+  &__input:active {
+    border: 1px solid $c-orange;
+    background-color: $c-orange;
+    opacity: 0.2;
+
+  }
+
+  &__error {
+    text-align: end;
+    color: $c-red;
+    height: 20px;
+  }
+
+  &__button {
+    margin-top: 40px;
+    max-width: 124px;
+    width: 100%;
+  }
+
+}
+
+#map {
+  height: 896px;
+  width: 712px;
+}

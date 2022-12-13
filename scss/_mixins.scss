@@ -1,0 +1,107 @@
+// * Font Size
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+
+// * Generate EM
+// @function em($px) {
+//   @return $px / $fs-base + em;
+// }
+
+// // Generate size
+// @mixin size($px) {
+//   width: $px + px;
+//   height: $px + px;
+// }
+
+
+// Flex
+@mixin flex($center: null, $endMode: null) {
+  align-items: center;
+  display: flex;
+
+  @if $center {
+    justify-content: center;
+  } @else {
+    justify-content: space-between;
+  }
+}
+
+// Background center
+@mixin backgroundContainCenter {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// Background cover center
+@mixin backgroundCoverCenter {
+  background-size: cover;
+  background-position: center center;
+}
+
+// Position absolutely full
+@mixin absolutelyFull {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Global fixed
+@mixin fixedGlobal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fixed($top, $right, $bottom, $left) {
+  position: fixed;
+  z-index: 999;
+
+  @if $top {
+    top: $top + px;
+  }
+  @if $right {
+    right: $right + px;
+  }
+  @if $bottom {
+    bottom: $bottom + px;
+  }
+  @if $left {
+    left: $left + px;
+  }
+}
+
+// * Font Size
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}

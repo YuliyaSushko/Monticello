@@ -1,0 +1,206 @@
+@import '../variables';
+@import '../elements/button';
+
+
+.footer {
+  background-color: $c-dark-grey;
+  padding-top: 75px;
+  padding-left: 104px;
+  padding-right: 104px;
+  padding-bottom: 104px;
+  color: $c-white;
+  max-width: 100%;
+  // height: 397px;
+
+
+
+  &__wrapper {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    
+    @include media("<=desktop") {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
+  &__list {
+    justify-content: space-between;
+    display: flex;
+    gap: 70px;
+
+    @include media("<=desktop") {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item-first {
+    width: 100%;
+    max-width: 264px;
+  }
+
+  &__logo {
+    color: $c-white;
+}
+
+  &__logo1{
+    fill: $c-yellow;
+  }
+
+  // &__text {
+  //   text-shadow:0px 0px $c-white;
+    
+  // }
+
+
+
+  &__footer__icon {
+    color: $c-white;
+  }
+
+  &__discription {
+    margin-top: 34px;
+    font-family: $ff-helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+
+  &__copyright {
+    margin-top: 21px;
+    font-family: $ff-helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+
+  &__contacts-name {
+    font-family: $ff-manrope;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: start;
+  }
+
+  &__yellow {
+    color: $c-light-yellow;
+  }
+
+  &__contacts {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__block {
+    margin-top: 7px;
+    display: flex;
+    gap: 18px;
+
+  }
+
+  &__image {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__subtitle {
+    font-family: $ff-helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    &__link {
+      transition: $t-normal;
+      width: 30px;
+      height: 30px;
+      fill: $c-white;
+    }
+
+    &__link a svg {
+      fill: $c-white;
+    }
+    
+    &__link a svg:hover {
+      fill: $c-orange;
+    }
+
+    &-discription {
+      margin-top: 36px;
+      width: 100%;
+      max-width: 200px;
+      color: $c-grey;
+    }
+  }
+
+  &__label {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-family: $ff-manrope;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $c-grey;
+  }
+
+  &__input {
+    padding-left: 16px;
+    margin-top: 8px;
+    opacity: 0.8;
+    height: 56px;
+    width: 296px;
+    border-radius: 5px;
+    border: 1px solid  $c-light-grey;
+    background-color: $c-white;
+  }
+
+  &__input:hover {
+    border: 1px solid $c-light-yellow
+  }
+
+  &__input:active {
+    border: 1px solid $c-orange;
+    background-color: $c-orange;
+    opacity: 0.2;
+  }
+
+  &__button {
+    margin-top: 24px;
+    height: 56px;
+    width: 100%;
+    max-width: 172px;
+  }
+}
+
+.social__link:hover {
+  fill: $c-orange;
+}
+
+.footer__logo-item ~ .footer__text {
+  color: $c-white !important;
+}

@@ -1,0 +1,22 @@
+.stars {
+  display: flex;
+  gap:8px;
+
+}
+
+
+.icon__star {
+  width: 20px;
+  height: 20px;
+  fill: $c-light-yellow;
+}
+
+.star__input {
+  display: none;
+}
+
+// .star {
+//   width: 20px;
+//   height: 20px;
+//   background-color: orange;
+// }

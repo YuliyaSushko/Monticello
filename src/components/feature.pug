@@ -1,0 +1,37 @@
+mixin feature()
+  section.feature
+    .feature__wrapper
+      h1.feature__title#feature Feature
+      +info-block({
+        reverseMode: true,
+        src: '../assets/images/group2.svg',
+        alt: 'boy-with-notebook',
+        subtitle: 'Get more done',
+        title: 'Add your tasks.Organize your life.Achieve more every day.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ipsum in at justo. Lacus turpis purus, feugiat tortor.',
+        
+      }
+      )
+      +info-block({
+        classes2: 'info-block__shape',
+        src: '../assets/images/group3.svg',
+        alt: 'Man-with-lamp',
+        subtitle: 'Clear your mind',
+        title: 'Dive into deep focus without distraction',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ipsum in at justo. Lacus turpis purus, feugiat tortor.'
+      }
+      )
+      +info-block({
+        reverseMode: true,
+        src: '../assets/images/paper-airplane.svg',
+        alt: 'Paper-airline',
+        subtitle: 'We are the team',
+        title: 'Challenge your friends and get even better results',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ipsum in at justo. Lacus turpis purus, feugiat tortor.',
+      }
+      )
+
+  .feature__footer
+    .feature__footer--content
+      p.feature__footer__title “Focus on being productive instead of busy.” -Tim Ferriss
+      p.feature__footer__subtitle Explore more features

@@ -1,0 +1,47 @@
+mixin footer()
+  section.footer
+    .footer__wrapper
+      .footer__list 
+        .footer__item.footer__item-first
+          .footer__logo
+            +logo()
+          p.footer__discription Join millions of people who organize work and life with Be productive
+          p.footer__copyright Copyright 2022.All Rights Reserved by BP 
+        .footer__item 
+          .footer__contacts-name Get in Touch
+          ul.footer__contacts
+            li.footer__block
+              .footer__image
+                img(src="../../assets/images/location.svg", alt="location")
+              .footer__subtitle 8819 Los-Angeles 21-20
+            li.footer__block
+              .footer__image
+                img(src="../../assets/images/email.svg", alt="email")
+              .footer__subtitle beproductive_app@hello.com
+            li.footer__block
+              .footer__image
+                img(src="../../assets/images/call.svg", alt="phone")
+              .footer__subtitle +1 386-688-3295
+        .footer__item
+          ul.footer__social 
+            li.footer__social__link 
+              a(href="https://www.facebook.com/" target="_blank") 
+                include ../../assets/images/facebook.svg
+            li.footer__social__link 
+              a(href="https://twitter.com/" target="_blank") 
+                include ../../assets/images/twitter.svg
+            li.footer__social__link 
+              a(href="https://www.instagram.com" target="_blank") 
+                include ../../assets/images/instagram.svg
+            li.footer__social__link 
+              a(href="https://www.youtube.com/" target="_blank") 
+                include ../../assets/images/youtube.svg
+          p.footer__social-discription Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod.
+        .footer__item
+          p.footer__contacts-name.footer__yellow  Join a Newsletter
+          label.footer__label
+            span.footer__name Your Email
+            input(class="footer__input" type='email' name='email' placeholder="Enter Your Email")
+          .footer__buttons 
+            button.button.footer__button
+              span Subscribe

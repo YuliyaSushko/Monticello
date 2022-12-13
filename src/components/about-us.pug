@@ -1,0 +1,37 @@
+mixin about-us()
+  section.about-us
+    .wrapper.about-us__wrapper
+      .about-us__head 
+        .about-us__content
+          h1.about-us__title#about-us What Are People Saying About Us
+        .about-us__slider 
+          button.about-us__button.about-us__back#js-prev
+            include ../../assets/icons/back.svg
+          button.about-us__button.about-us__next#js-next
+            include ../../assets/icons/next.svg
+      .js-swiper
+        ul.about-us__list.swiper-wrapper
+          li.about-us__item.swiper-slide
+            .about-us__stars
+              +stars()
+            p.about-us__subtitle "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+            .about-us__avatar
+              .about-us__person
+                img(class="about-us__photo" src="../../assets/images/man-avatar.jpg" alt="avatar")
+              p.about-us__name Jacob   
+          li.about-us__item.swiper-slide
+            .about-us__stars
+              +stars()
+            p.about-us__subtitle "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+            .about-us__avatar
+              .about-us__person
+                img(class="about-us__photo" src="../../assets/images/woman.jpg" alt="avatar")
+              p.about-us__name Anna
+          li.about-us__item.swiper-slide
+            .about-us__stars
+              +stars()
+            p.about-us__subtitle "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis turpis nisi, justo, integer dignissim ornare leo euismod ac."
+            .about-us__avatar
+              .about-us__person 
+                img(class="about-us__photo" src="../../assets/images/woman2.jpg" alt="avatar")
+              p.about-us__name Jessica

@@ -1,0 +1,44 @@
+//- Підключення компонентів і елементів
+include ./src/components/index 
+include ./src/elements/index
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    //- * Fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap' rel='stylesheet')
+
+    //- * Swiper
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    //- *Styles
+    link(rel="stylesheet" href="index.css")
+
+
+  body 
+  include ./assets/icons/symbol-defs.svg
+  +header()
+  +banner()
+  +feature()
+  +about-us()
+  +contact-us()
+  +questions()
+  +keep()
+  +footer()
+  +modal()
+
+
+
+
+
+
+
+  script(defer src='index.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC4jPVgCJ_Uj4gZs8M8AaOKFEueZQD-vKA&region=EN&language=en&callback=initMap&v=weekly' async='')
+

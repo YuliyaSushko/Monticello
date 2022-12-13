@@ -1,0 +1,36 @@
+mixin modal()
+  section.modal#js-modal
+    .modal__wrapper#js-modal-body 
+      .modal__content__block
+        .modal__image 
+          img(src="../assets/images/modal.jpg", alt="phone-modal")
+        .modal__registration 
+          .modal__content
+            .modal__title Login or create a free   Be productive account for all our expert advice
+            label.modal__item
+              span.modal__name Email Address
+              input.modal__input(type='email' name='email')
+              .modal__error
+            .modal__buttons
+              button.modal__button
+                span.modal__span Continue
+            .modal__block
+              .modal__line
+              p.modal__text or 
+              .modal__line 
+            .modal__links          
+              a( class="modal__link" href="#" target="_blank")
+                .modal__logo
+                  img(src="../../assets/images/google-logo.jpg", alt="google")
+                span Continue with Google          
+              a(class="modal__link" href="#" target="_blank")
+                .modal__logo
+                  img(src="../../assets/images/facebook-logo.jpg", alt="facebook")
+                span Continue with Facebook
+              a(class="modal__link" href="#" target="_blank")
+                .modal__logo
+                  img(src="../../assets/images/apple-logo.jpg", alt="apple")
+                span Continue with Apple
+        .modal__close#js-close-btn
+          button.modal__close-button
+            include ../../assets/icons/close.svg

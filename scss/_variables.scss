@@ -1,0 +1,32 @@
+// * Colors
+$c-light-pink:#ECEEF4;
+$c-dark-grey:#2E3953;
+$c-yellow: #FCD062;
+$c-orange: #FCA03B;
+$c-black: #232833;
+$c-grey: #B5B6BD;
+$c-white: #ffff;
+$c-dark-blue: #35415E;
+$c-light-yellow:#FCCB51;
+$c-white-pink: #F3F4F6;
+$c-white-grey: #666666;
+$c-red:#8a3030;
+$c-light-grey:rgb(160, 188, 248);
+$c-blue-dark: #BEBEBE;
+$c-accordion:#6D7B80;
+
+// * Font size
+$fs-base: 14;
+
+// * Font family
+$ff-manrope: 'Manrope', sans-serif;
+$ff-helvetica: 'Helvetica Neue', sans-serif;
+
+// * Bezier
+$b-normal: cubic-bezier(0.4, 0, 0.2, 1);
+
+// * Transition
+$t-normal: 0.35s $b-normal;
+
+// Box Shadow
+$bs-normal: 1px 1px 5px rgba($c-black, 0.1);

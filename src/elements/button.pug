@@ -1,0 +1,16 @@
+mixin button(args='')
+  - const type = args.type || 'button'
+  - let classes = ''
+  - args.whiteMode ? classes += ' button--grey' : null
+
+  button.button(type=args.type, class=classes, data-tooltip=args.toolTip).simptip-position-bottom.simptip-fade.simptip-smooth
+    if args.icon
+      span.button__text=args.text
+        |
+        |
+        span.button__hidden --
+        
+    if !args.icon 
+      span.button__text=args.text 
+    if !args.icon, !args.text 
+      span(style='color:red;') Default text

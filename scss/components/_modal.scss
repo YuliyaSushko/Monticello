@@ -1,0 +1,194 @@
+@import '../variables';
+@import '../elements/button';
+
+
+.modal {
+  background-color: rgba(160, 188, 248, 0.5);
+  // width: 
+  
+  z-index: 1001;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  padding: 30px 200px;
+
+  width: 100vw;
+  height: 100vh;
+  
+
+  &__open {
+    display: block;
+  }
+
+
+
+  &__wrapper {
+    background-color: $c-white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 656px;
+  }
+  
+  &__content__block  {
+    display: flex;
+    gap:93px;
+    justify-content: center;
+
+  }
+  &__image {
+    max-width: 547px;
+    height: 656px;
+  }
+
+  
+
+  &__registration {
+    width: 100%;
+    max-width: 273px;
+    padding-top: 130px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  &__title {
+    font-family: $ff-manrope;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $c-black ;
+    text-align: center;
+    
+  }
+
+  &__item {
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    
+    font-family: $ff-manrope;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $c-black ;
+    opacity: 0.8;
+    
+  }
+
+  &__input {
+    margin-top: 12px;
+    height: 43px;
+    width: 273px;
+    border: 1px solid $c-blue-dark;
+    border-radius: 4px;
+    
+  }
+
+  &__input:hover {
+    border: 1px solid $c-orange;
+  }
+
+  &__error {
+    text-align: end;
+    color: $c-red;
+    height: 10px;
+  }
+
+  &__button {
+    width: 273px;
+    height: 43px;
+    background-color: $c-dark-grey;
+    border-radius: 4px;
+  }
+
+  &__span {
+    color: $c-white;
+  }
+
+
+  &__block {
+    margin-top: 12px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__line {
+    width: 100%;
+    max-width: 125px;
+    height: 1px;
+    border: 1px solid $c-blue-dark;
+  }
+
+  &__text {
+    font-family: $ff-manrope;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 400;
+    color: $c-blue-dark ;
+    align-items: center;
+  }
+
+  &__links {
+    margin-top: 12px;
+  }
+
+
+  &__link {
+    margin-top: 12px;
+    width: 272px;
+    height: 48px;
+    border: 1px solid $c-light-grey;
+    color: $c-black;
+    background-color: $c-white;
+    transition: $t-normal;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link:hover {
+    
+    color: $c-white;
+    background-color: $c-dark-grey;
+  }
+  &__link:hover ~ span {
+    color:$c-white;
+  }
+
+  &__logo {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  &__close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+  }
+
+  &__close-button {
+    border: none;
+    border-radius: 50%;
+    background-color: $c-light-yellow;
+    width: 40px;
+    height: 40px;
+  }
+}
+.close {
+  color: $c-white;
+}

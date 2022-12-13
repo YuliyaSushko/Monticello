@@ -1,0 +1,43 @@
+.button {
+  background-color:$c-yellow;
+  justify-content: center;
+  transition: $t-normal;
+  font-family: $ff-manrope;
+  align-items: center;
+  position: relative;
+  font-size: em(16);
+  line-height: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  border: none;
+
+
+  &:hover {
+    background-color: $c-orange;
+
+    & .button__hidden {
+      opacity: 1;
+    }
+  }
+
+  &--grey {
+    background-color: $c-dark-grey;
+
+    &:hover {
+      color: $c-white;
+    }
+  }
+
+  &__hidden {
+    transition: $t-normal;
+    position: absolute;
+    opacity: 0;
+  }
+}
+

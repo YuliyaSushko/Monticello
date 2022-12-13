@@ -1,0 +1,134 @@
+@import "../media";
+@import "../media";
+
+.feature {
+  // padding-top: 48px;
+  // padding-bottom: 80px;
+  background-color: $c-light-pink;
+
+  &__wrapper {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    @include media("<=desktop") {
+      flex-direction: column;
+    }
+
+    &--reverse {
+      background-color: $c-white;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      display: flex;
+
+      @include media("<=desktop") {
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &__image-block {
+    position: relative;
+    max-width: 624px;
+    display: flex;
+    width: 100vw;
+  }
+
+  &__content {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 550px;
+
+    @include media("<=desktop") {
+      max-width: 100vw;
+    }
+  }
+
+  &__title {
+    font-family: $ff-helvetica;
+    letter-spacing: -2px;
+    font-size: em(36);
+    font-weight: 700;
+    color: $c-black;
+
+    @include media("<=desktop") {
+      padding-top: 20px;
+    }
+
+    @include media("<=tablet") {
+      font-size: em(28);
+    }
+  }
+
+  &__subtitle {
+    font-family: $ff-helvetica;
+    padding-top: 16px;
+    font-size: em(24);
+    font-weight: 700;
+    color: $c-orange;
+    color: $c-black;
+  }
+
+  &__description {
+    padding-top: 16px;
+  }
+
+  &__shape {
+    position: absolute;
+    width: 15%;
+    left: -8%;
+    top: 22%;
+
+    @include media("<=desktop") {
+      display: none;
+    }
+
+    
+  }
+  
+  
+}
+
+.feature__footer {
+  
+  background-color: $c-dark-grey;
+  padding-bottom: 70px;
+  padding-right: 161px;
+  padding-left: 161px;
+  padding-top: 70px;
+
+  &--content {
+    flex-direction: column;
+    align-items: center;  
+    display: flex;
+  }
+  &__subtitle {
+    font-family: $ff-helvetica;
+    align-items: center;  
+    line-height: 37px;
+    color: $c-yellow;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    }
+
+  &__title {
+    font-family: $ff-helvetica;
+    align-items: center;  
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 40px;
+  color: $c-white;
+  display: flex;
+  }
+
+  
+}
+
+.fg1:hover {
+  fill: $c-orange;
+}

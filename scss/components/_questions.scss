@@ -1,0 +1,154 @@
+@import '../mixins';
+@import '../media';
+@import '../variables';
+
+.questions {
+  background-color: $c-white;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    padding-top: 90px;
+    padding-bottom: 170px;
+  }
+
+  &__title {
+    font-family: $ff-manrope;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  // &__block {
+  //   margin-top: 90px;
+  //   display: flex;
+  //   justify-content: center;
+  //   gap: 63px;
+  // }
+
+  // &__list {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
+
+  // &__accordion:hover {
+  //   background-color: $c-dark-grey;
+  //   color: $c-white;
+  // }
+
+  // &__accordion:hover ~ select {
+  //   transform: rotate(180deg);
+  // }
+
+  &__image {
+    width: 100%;
+    max-width: 560px;
+
+    @include media("<=desktop") {
+      display: none;
+    }
+  }
+}
+.questions__acordion  {
+  margin-top: 95px;
+  display: flex;
+  gap: 63px;
+
+  @include media("<=desktop") {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    
+  }
+  
+}
+
+.accordion {
+  margin-top: 10px;
+  background-color: $c-white;
+  cursor: pointer;
+  width: 100%;
+  transition: $t-normal;
+  max-width: 607px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  @include media("<=desktop") {
+    max-width: 100vw;
+  }
+
+  
+  
+}
+
+.accordion__item {
+  margin-top: 20px;
+  width: 607px;
+
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  32px;
+  color: $c-black;
+  font-weight: 700;
+  font-family: $ff-helvetica;
+  font-size: 18px;
+  line-height: 27px;
+  width: 100%;
+  background-color: $c-white;
+  cursor: pointer;
+  transition: $t-normal;
+}
+
+.accordion__header::after {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  content: '';
+}
+
+
+
+
+.accordion__header.active::after {
+  transform: rotate(-180deg);
+}
+
+.accordion__header:hover {
+  background-color: $c-dark-grey;
+  color: $c-white;
+}
+
+.accordion__item_hidden .accordion__header {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.accordion__body {
+  display: none;
+  padding: 32px;
+  overflow: hidden;
+  background: #fff;
+  color:$c-accordion;
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__header {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+// .accordion__item:not(.accordion__item_show) .accordion__body {
+//   display: none;
+// }
+

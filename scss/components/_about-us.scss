@@ -1,0 +1,143 @@
+@import "../media";
+@import '../variables';
+
+.about-us {
+  background-color: $c-light-pink;
+  padding-bottom: 126px;
+  padding-top: 100px;
+
+  @include media("<=desktop") {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+    display: flex;
+
+  }
+
+  &__head {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  &__content {
+    justify-content: center;
+    align-items: center;
+    max-width: 562px;
+    display: flex;
+    width: 100%;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__back {
+    background-color:$c-light-pink;
+    border: none;
+  }
+
+  &__next {
+    border: none;
+  }
+
+
+  &__title {
+    font-family: $ff-manrope;
+    line-height: 64px;
+    font-weight: 800;
+    font-size: 48px;
+
+    @include media('<=tablet') {
+      line-height: 32px;
+      font-size: 28px;
+    }
+  }
+    &__list {
+      justify-content: space-around;
+      margin-top: 64px;
+      display: flex;
+      gap:30px;
+    }
+
+    &__item {
+      background-color: $c-white-pink;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 25px;
+      text-align: center;
+      border-radius: 6px;
+      display: flex;
+    }
+
+
+    &__stars {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    
+
+    &__subtitle {
+      font-family: $ff-helvetica;
+      line-height: 30px;
+      margin-top: 34px;
+      font-weight: 400;
+      max-width: 333px;
+      font-size: 20px;
+  
+  
+      @include media('<=tablet') {
+        line-height: 18px;
+      }
+    }
+
+
+    &__avatar {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 32px;
+      display: flex;
+    }
+
+    &__person {
+      align-items: flex-start;
+      align-items: center;
+      margin-top: 32px;
+      display: flex;
+      
+    }
+    
+    &__photo {
+      border-radius: 50%;
+      width: 64px ;
+      height: 64px;
+    }
+
+    &__name {
+      font-family: $ff-helvetica;
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 7px;
+  
+  
+      @include media('<=tablet') {
+        line-height: 16px;
+      }
+    }
+
+  }
+  
+  .about-us__button:hover {
+    opacity: 0.5;
+  }
+  .about-us__button:checked {
+    color: $c-dark-grey;
+  }

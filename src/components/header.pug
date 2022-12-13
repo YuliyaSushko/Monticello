@@ -1,0 +1,16 @@
+mixin header()
+  header.header 
+    .wrapper.header__wrapper
+      .header__logo
+        +logo()
+      .header__block
+        .header__navigation
+          +navigation
+        .header__button#js-button
+          +button({
+            type: 'button',
+            text: 'Download',
+            toolTip: 'Push for Download'
+          })
+        .header__burger 
+          +burger()

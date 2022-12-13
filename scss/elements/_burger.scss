@@ -1,0 +1,55 @@
+.burger {
+  background-color: transparent;
+  position: relative;
+  margin-left: 20px;
+  transition: 1s;
+  display: none;
+  border: none;
+  padding: 5px;
+  z-index: 920;
+
+  @include media("<=desktop") {
+    display: block;
+    cursor: pointer;
+    color: $c-black;
+    margin-left: 10px;
+  }
+
+
+  &__bar {
+    width: 34px;
+    height: 2px;
+    display: block;
+    background-color: $c-black;
+    margin-bottom: 8px;
+  }
+  &--active {
+    transform: rotate(360deg);
+    & > .burger__bar {
+      transform: rotate(135deg);
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  // &__bar {
+  //   background-color: $c-white;
+  //   transition: $t-normal;
+  //   margin: 5px auto;
+  //   display: block;
+  //   width: 25px;
+  //   height: 3px;
+
+  //   // @include media("<=desktop") {
+  //   //   display: block;
+  //   //   cursor: pointer;
+  //   //   color: $c-black;
+  //   // }
+  // }
+}

@@ -1,0 +1,51 @@
+
+
+
+mixin registration()
+  // * Form
+  form#js-registration-form.registration(method='post')
+    .registration__wrapper
+      // * Title
+      h1.registration__title Login or create a free Be productive account for all our expert advice
+      // * First name
+      label.registration__item
+        span First name
+        input(type='text' name='firstName')
+        #js-registration-first-name-error.registration__error
+        // * Last name
+        label.registration__item
+          span Last name
+          input(type='text' name='lastName')
+          #js-registration-last-name-error.registration__error
+        // * Email
+        label.registration__item
+          span Email
+          input(type='email' name='email')
+          #js-registration-email-error.registration__error
+        // * Username
+        label.registration__item
+          span Username
+          input(type='text' name='username')
+          #js-registration-username-error.registration__error
+        // * Password
+        label.registration__item
+          span Password
+          input(type='password' name='password')
+          #js-registration-password-error.registration__error
+        // * Disable season animation
+        label.registration__item
+          span Disabled season animation
+          input.registration__disabled-season-animation(type='checkbox' name='disabledSeasonAnimation')
+          #js-form-disabled-season-animation-error.form__error
+        // * Language
+        label.registration__item.registration__item--select
+          select(name='language')
+            option(value='en') EN
+            option(value='ua') UA
+          #js-registration-language-error.registration__error
+        // * Footer
+        .registration__footer
+          button.button.registration__footer__item.registration__reset(type='reset')
+            span Reset
+          button.button.registration__footer__item.registration__submit(type='submit')
+            span Submit

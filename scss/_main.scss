@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Custom Scroll
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 999;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $c-white;
+  border-radius: 3px;
+  outline: none;
+}
+
+body {
+  background-color: $c-white;
+  font-size: $fs-base + px;
+  font-family:$ff-manrope;
+  color: $c-black;
+  //
+  height: 3000px; // TODO -> Remove in future
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Icon style
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.wrapper {
+  // width: 100%; 
+  padding-left: 104px;
+  padding-right: 104px;
+
+  
+  @include media("<=desktop") {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  
+}
+
+
+
+h1 {
+  font-family: $ff-manrope;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  align-items: center;
+}
+
+
+

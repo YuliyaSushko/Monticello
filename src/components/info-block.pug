@@ -1,0 +1,17 @@
+mixin info-block(args)
+  - let classes = ''
+  - let classes2 = args.classes || ''
+  - args.reverseMode ? classes += ' info-block__wrapper--reverse ' : null
+
+  .info-block
+    .info-block__wrapper(class=classes)
+      .info-block__image-block
+        if args.reverseMode
+          img.info-block__image(src=args.src, alt=args.alt)
+        if !args.reverseMode 
+          img.info-block__image(src=args.src, alt=args.alt)
+      .info-block__content-block
+        .info-block__content
+          p.info-block__subtitle=args.subtitle 
+          h2.info-block__title=args.title 
+          p.info-block__description=args.description

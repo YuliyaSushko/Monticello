@@ -1,0 +1,34 @@
+mixin contact-us()
+  section.contact-us 
+    .contact-us__wrapper 
+      .contact-us__map 
+        #map 
+
+
+      .contact-us__block 
+        h1.contact-us__title#contact-us Contact Us
+        .contact-us__form         
+          label.contact-us__item
+            span.contact-us__name First name
+            input(class="contact-us__input" type='text' name='firstName' placeholder="Enter your first name" )
+            #js-registration-first-name-error.contact-us__error
+          label.contact-us__item
+            span.contact-us__name Last name
+            input(class="contact-us__input" type='text' name='lastName' placeholder="Enter your last name")
+            #js-registration-last-name-error.contact-us__error
+          label.contact-us__item
+            span.contact-us__name Email
+            input(class="contact-us__input" type='email' name='email' placeholder="Enter your email")
+            #js-registration-email-error.contact-us__error
+          label.contact-us__item
+            span.contact-us__name Message
+            input(class="contact-us__input contact-us__input--message" type='text' name='message' placeholder="Enter your message")
+            #js-registration-message-error.contact-us__error
+        .contact-us__button
+          +button({
+            type: 'button',
+            text: 'Send',
+            toolTip: 'Push for Send'
+          }) 
+
+          
